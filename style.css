@@ -6,6 +6,9 @@
 
 #container {
   height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction:column ;
 }
 .background-default{
   background: #020024;
@@ -18,6 +21,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
+  margin-bottom: 50px;
 }
 
 #rez-container {
@@ -31,8 +35,9 @@
   border-radius: 10px;
   border: 1px solid white;
   height: 30px;
-  width: 50%;
+  width: 600px;
   padding: 20px;
+  font-size: 1rem;
   color:hsl(0, 0%, 80%);
 
 }
@@ -65,3 +70,115 @@
   font-size: 1.6rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+
+#rez-container {
+  visibility:hidden;
+  color: white;
+  height: 20%;
+  width:50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+}
+
+#rez-container h1 {
+  font-family:'Courier New', Courier, monospace;
+  font-size: 4rem;
+  margin-top: -20px;
+  font-weight: 400;
+}
+#rez-container h2 {
+  font-family:'Courier New', Courier, monospace;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+#wheater-icon {
+  width: 200px;
+}
+
+
+#details-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-top: 50px;
+  gap: 200px;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 20px;
+}
+
+.details p {
+  font-weight: bold;
+  font-family:'Courier New', Courier, monospace;
+}
+
+.details img {
+  width: 50px;
+}
+
+@media (max-width: 768px) {
+  #city {
+    width: 80%;
+  }
+
+  #wheater-icon {
+    width: 150px;
+  }
+
+  #rez-container h1 {
+    font-size: 2.5rem;
+  }
+
+  #rez-container h2 {
+    font-size: 1.5rem;
+  }
+
+  #details-container {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  #city {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  #wheater-icon {
+    width: 100px;
+  }
+
+  #rez-container h1 {
+    font-size: 2rem;
+  }
+
+  #rez-container h2 {
+    font-size: 1.2rem;
+  }
+
+  #details-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .details img {
+    width: 30px;
+  }
+}
+
